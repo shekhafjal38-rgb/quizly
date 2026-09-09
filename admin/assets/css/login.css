@@ -1,0 +1,317 @@
+/* ================================
+   Quizly - Login Page Styles
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff, #f4f7fb);
+    color: #1e293b;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+/* ================================
+   Login Card
+   ================================ */
+
+.center {
+    width: 100%;
+    max-width: 430px;
+
+    background: #ffffff;
+    padding: 42px 38px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.10),
+        0 4px 12px rgba(79, 70, 229, 0.06);
+
+    border: 1px solid rgba(226, 232, 240, 0.8);
+
+    animation: fadeIn 0.4s ease;
+}
+
+/* ================================
+   Heading
+   ================================ */
+
+.center h1 {
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 800;
+
+    color: #111827;
+
+    margin-bottom: 30px;
+
+    letter-spacing: -0.7px;
+}
+
+.center h1::after {
+    content: "";
+    display: block;
+
+    width: 45px;
+    height: 4px;
+
+    margin: 12px auto 0;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+}
+
+/* ================================
+   Form
+   ================================ */
+
+form {
+    width: 100%;
+}
+
+/* ================================
+   Inputs
+   ================================ */
+
+form input {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 16px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    color: #1e293b;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+form input::placeholder {
+    color: #94a3b8;
+}
+
+form input:hover {
+    border-color: #c7d2fe;
+}
+
+form input:focus {
+    background: #ffffff;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+/* ================================
+   Login Button
+   ================================ */
+
+form button {
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(79, 70, 229, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(79, 70, 229, 0.32);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+form button:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.25);
+    outline-offset: 2px;
+}
+
+/* ================================
+   Error Message
+   ================================ */
+
+.error {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    color: #dc2626;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+/* ================================
+   Register Text
+   ================================ */
+
+.center > p {
+    margin-top: 24px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.center > p a {
+    color: #4f46e5;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.center > p a:hover {
+    color: #7c3aed;
+
+    text-decoration: underline;
+}
+
+/* ================================
+   Animation
+   ================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   Tablet
+   ================================ */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 16px;
+    }
+
+    .center {
+        padding: 34px 26px;
+
+        border-radius: 17px;
+    }
+
+    .center h1 {
+        font-size: 28px;
+    }
+}
+
+/* ================================
+   Small Mobile
+   ================================ */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .center {
+        padding: 28px 20px;
+
+        border-radius: 15px;
+    }
+
+    .center h1 {
+        font-size: 25px;
+
+        margin-bottom: 25px;
+    }
+
+    form input,
+    form button {
+        height: 48px;
+    }
+}
+
+/* ================================
+   Text Selection
+   ================================ */
+
+::selection {
+    background: #6366f1;
+    color: #ffffff;
+}

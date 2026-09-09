@@ -1,0 +1,282 @@
+/* ================================
+   Quizly - Main Dashboard Styles
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* ================================
+   Header
+   ================================ */
+
+header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.25);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 9px 16px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+/* ================================
+   Main Content
+   ================================ */
+
+main {
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.center {
+    width: min(100%, 1050px);
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* ================================
+   Welcome Section
+   ================================ */
+
+.center h2 {
+    font-size: 30px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.center h2::first-letter {
+    color: #4f46e5;
+}
+
+.center > p {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+/* ================================
+   Results Heading
+   ================================ */
+
+.center h3 {
+    font-size: 21px;
+    color: #1e293b;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* ================================
+   Results Table
+   ================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+table th {
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 15px 16px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+table td {
+    padding: 16px;
+    font-size: 14px;
+    color: #475569;
+    border-bottom: 1px solid #eef2f7;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tbody tr,
+table tr {
+    transition: background 0.2s ease;
+}
+
+table tr:hover td {
+    background: #f8faff;
+}
+
+/* Score column */
+table td:nth-child(2) {
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+/* Time column */
+table td:nth-child(3) {
+    color: #64748b;
+}
+
+/* Date column */
+table td:nth-child(4) {
+    color: #64748b;
+    white-space: nowrap;
+}
+
+/* ================================
+   Empty Table / No Results
+   ================================ */
+
+table:empty {
+    display: none;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 16px 20px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 25px 12px;
+    }
+
+    .center {
+        padding: 25px 18px;
+        border-radius: 14px;
+    }
+
+    .center h2 {
+        font-size: 24px;
+    }
+
+    .center > p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    /* Horizontal scrolling for table */
+    .center {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
+
+/* ================================
+   Small Mobile Screens
+   ================================ */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 18px 8px;
+    }
+
+    .center {
+        padding: 22px 14px;
+    }
+
+    .center h2 {
+        font-size: 21px;
+    }
+
+    .center h3 {
+        font-size: 18px;
+    }
+}
+
+/* ================================
+   Selection
+   ================================ */
+
+::selection {
+    background: #6366f1;
+    color: #ffffff;
+}

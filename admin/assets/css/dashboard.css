@@ -1,0 +1,699 @@
+/* ================================
+   Quizly Admin - Dashboard
+   ================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ================================
+   Quizly Admin - Global Styles
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* ================================
+   Admin Navbar
+   ================================ */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 72px;
+
+    padding: 15px 5%;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    box-shadow:
+        0 4px 18px rgba(79, 70, 229, 0.25);
+}
+
+/* ================================
+   Logo / Heading
+   ================================ */
+
+header h1 {
+    flex-shrink: 0;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.6px;
+
+    white-space: nowrap;
+}
+
+/* ================================
+   Navbar
+   ================================ */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 9px 13px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.16);
+
+    border-color: rgba(255, 255, 255, 0.18);
+
+    transform: translateY(-1px);
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+/* Current page */
+
+nav a[href="dashboard.php"] {
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color: rgba(255, 255, 255, 0.22);
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Logout */
+
+nav a[href="logout.php"] {
+    background: rgba(239, 68, 68, 0.16);
+
+    border-color: rgba(254, 202, 202, 0.18);
+}
+
+nav a[href="logout.php"]:hover {
+    background: #ef4444;
+
+    border-color: #ef4444;
+
+    color: #ffffff;
+}
+
+/* ================================
+   Main
+   ================================ */
+
+main {
+    width: 100%;
+
+    min-height: calc(100vh - 72px);
+
+    padding: 45px 5%;
+}
+
+/* ================================
+   Forms - Shared Admin Styling
+   ================================ */
+
+form {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.08);
+}
+
+form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+form input,
+form textarea,
+form select {
+    font-family: inherit;
+}
+
+/* ================================
+   Messages
+   ================================ */
+
+.error,
+.success {
+    max-width: 1000px;
+
+    margin: 0 auto 20px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.error {
+    color: #b91c1c;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+}
+
+.success {
+    color: #047857;
+
+    background: #ecfdf5;
+
+    border: 1px solid #a7f3d0;
+}
+
+/* ================================
+   Tablet
+   ================================ */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 15px 3%;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+    main {
+        padding: 35px 3%;
+    }
+}
+
+/* ================================
+   Mobile
+   ================================ */
+
+@media (max-width: 768px) {
+
+    header {
+        position: relative;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        padding: 18px 15px;
+
+        gap: 14px;
+
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    form {
+        padding: 25px 20px;
+
+        border-radius: 15px;
+    }
+}
+
+/* ================================
+   Small Mobile
+   ================================ */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        width: 100%;
+
+        gap: 6px;
+    }
+
+    nav a {
+        width: 100%;
+
+        padding: 9px 6px;
+
+        font-size: 11px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    form {
+        padding: 20px 15px;
+    }
+}
+
+/* ================================
+   Selection
+   ================================ */
+
+::selection {
+    background: #6366f1;
+
+    color: #ffffff;
+}
+
+
+/* ================================
+   Main Dashboard
+   ================================ */
+
+main {
+    width: 100%;
+
+    min-height: calc(100vh - 80px);
+
+    padding: 50px 7%;
+
+    background: #f4f7fb;
+}
+
+/* ================================
+   Dashboard Cards
+   ================================ */
+
+.cards {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+/* ================================
+   Individual Card
+   ================================ */
+
+.card {
+    position: relative;
+
+    min-height: 165px;
+
+    padding: 27px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 17px;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 22px rgba(15, 23, 42, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Purple top accent */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #4f46e5,
+        #7c3aed
+    );
+}
+
+/* Decorative circle */
+
+.card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    right: -35px;
+
+    bottom: -40px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 102, 241, 0.06);
+
+    pointer-events: none;
+}
+
+/* ================================
+   Hover
+   ================================ */
+
+.card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+        0 14px 30px rgba(79, 70, 229, 0.12);
+}
+
+/* ================================
+   Number
+   ================================ */
+
+.card strong {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #1e1b4b;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+}
+
+/* ================================
+   Different Card Colors
+   ================================ */
+
+/* Users */
+
+.card:nth-child(1)::before {
+    background: linear-gradient(
+        90deg,
+        #4f46e5,
+        #6366f1
+    );
+}
+
+/* Tests */
+
+.card:nth-child(2)::before {
+    background: linear-gradient(
+        90deg,
+        #7c3aed,
+        #8b5cf6
+    );
+}
+
+/* Results */
+
+.card:nth-child(3)::before {
+    background: linear-gradient(
+        90deg,
+        #0891b2,
+        #06b6d4
+    );
+}
+
+/* Feedbacks */
+
+.card:nth-child(4)::before {
+    background: linear-gradient(
+        90deg,
+        #059669,
+        #10b981
+    );
+}
+
+/* ================================
+   Card Labels
+   ================================ */
+
+.card:nth-child(1) {
+    color: #4f46e5;
+}
+
+.card:nth-child(2) {
+    color: #7c3aed;
+}
+
+.card:nth-child(3) {
+    color: #0891b2;
+}
+
+.card:nth-child(4) {
+    color: #059669;
+}
+
+/* ================================
+   Dashboard Heading Area
+   ================================ */
+
+.dashboard-title {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 28px;
+}
+
+.dashboard-title h2 {
+    color: #111827;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    margin-bottom: 7px;
+}
+
+.dashboard-title p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+/* ================================
+   Tablet
+   ================================ */
+
+@media (max-width: 1000px) {
+
+    main {
+        padding: 40px 30px;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .card {
+        min-height: 150px;
+    }
+}
+
+/* ================================
+   Mobile
+   ================================ */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .card {
+        min-height: 135px;
+
+        padding: 23px 20px;
+
+        border-radius: 14px;
+    }
+
+    .card strong {
+        font-size: 36px;
+
+        margin-top: 10px;
+    }
+}
+
+/* ================================
+   Small Mobile
+   ================================ */
+
+@media (max-width: 400px) {
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .card {
+        min-height: 125px;
+
+        padding: 20px 18px;
+    }
+
+    .card strong {
+        font-size: 33px;
+    }
+}
+
+/* ================================
+   Selection
+   ================================ */
+
+::selection {
+    background: #6366f1;
+
+    color: #ffffff;
+}

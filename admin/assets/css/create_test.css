@@ -1,0 +1,615 @@
+/* ================================
+   Quizly Admin - Create Test
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #1e293b;
+
+    min-height: 100vh;
+}
+
+/* ================================
+   Header
+   ================================ */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    padding: 18px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    box-shadow:
+        0 4px 15px rgba(79, 70, 229, 0.25);
+}
+
+header h1 {
+    font-size: 27px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+nav a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.18);
+
+    transform: translateY(-1px);
+}
+
+/* ================================
+   Main
+   ================================ */
+
+main {
+    width: min(100%, 1000px);
+
+    margin: 0 auto;
+
+    padding: 45px 20px 60px;
+}
+
+/* ================================
+   Messages
+   ================================ */
+
+.error,
+.success {
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.error {
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+}
+
+.success {
+    background: #ecfdf5;
+
+    border: 1px solid #a7f3d0;
+
+    color: #047857;
+}
+
+/* ================================
+   Form Container
+   ================================ */
+
+form {
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.08),
+        0 3px 10px rgba(79, 70, 229, 0.04);
+}
+
+/* ================================
+   Labels
+   ================================ */
+
+form > label,
+form .qblock label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+/* ================================
+   Inputs
+   ================================ */
+
+form > input[type="text"],
+form > input[type="number"],
+.qblock input,
+.qblock textarea,
+.qblock select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* Focus */
+
+form > input[type="text"]:focus,
+form > input[type="number"]:focus,
+.qblock input:focus,
+.qblock textarea:focus,
+.qblock select:focus {
+    border-color: #6366f1;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* ================================
+   Number of Questions
+   ================================ */
+
+#num_questions {
+    max-width: 220px;
+}
+
+/* ================================
+   Textarea
+   ================================ */
+
+.qblock textarea {
+    min-height: 100px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+/* ================================
+   Generate Questions Button
+   ================================ */
+
+button {
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 12px 20px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+/* First button */
+
+form > button[type="button"] {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    background: #eef2ff;
+
+    color: #4338ca;
+
+    border: 1px solid #c7d2fe;
+}
+
+form > button[type="button"]:hover {
+    background: #e0e7ff;
+
+    border-color: #a5b4fc;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(79, 70, 229, 0.10);
+}
+
+/* ================================
+   Questions Container
+   ================================ */
+
+#questions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+/* ================================
+   Question Block
+   ================================ */
+
+.qblock {
+    position: relative;
+
+    padding: 28px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 3px 10px rgba(15, 23, 42, 0.03);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.qblock:hover {
+    border-color: #c7d2fe;
+
+    box-shadow:
+        0 6px 18px rgba(79, 70, 229, 0.06);
+}
+
+/* ================================
+   Question Heading
+   ================================ */
+
+.qblock h4 {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    color: #312e81;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+.qblock h4::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 5px;
+
+    height: 22px;
+
+    margin-right: 10px;
+
+    border-radius: 5px;
+
+    background: linear-gradient(
+        180deg,
+        #4f46e5,
+        #7c3aed
+    );
+}
+
+/* ================================
+   Option Inputs
+   ================================ */
+
+.qblock input {
+    background: #ffffff;
+}
+
+/* ================================
+   Correct Answer
+   ================================ */
+
+.qblock label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: fit-content;
+
+    margin-top: 2px;
+
+    padding: 10px 13px;
+
+    background: #eef2ff;
+
+    border: 1px solid #c7d2fe;
+
+    border-radius: 8px;
+
+    color: #4338ca;
+
+    cursor: pointer;
+}
+
+.qblock select {
+    width: auto;
+
+    min-width: 75px;
+
+    margin: 0;
+
+    padding: 9px 12px;
+
+    background: #ffffff;
+
+    color: #312e81;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* ================================
+   Create Test Button
+   ================================ */
+
+form > button[type="submit"] {
+    display: block;
+
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 6px 16px rgba(79, 70, 229, 0.22);
+}
+
+form > button[type="submit"]:hover {
+    background: linear-gradient(
+        135deg,
+        #4338ca,
+        #6d28d9
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 22px rgba(79, 70, 229, 0.30);
+}
+
+form > button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ================================
+   Scroll / Long Forms
+   ================================ */
+
+#questions {
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   Tablet
+   ================================ */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 16px 20px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav a {
+        font-size: 14px;
+
+        padding: 8px 12px;
+    }
+
+    main {
+        padding: 30px 15px 45px;
+    }
+
+    form {
+        padding: 28px 22px;
+
+        border-radius: 16px;
+    }
+
+    .qblock {
+        padding: 23px 20px;
+    }
+}
+
+/* ================================
+   Mobile
+   ================================ */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+
+        font-size: 13px;
+    }
+
+    main {
+        padding: 18px 9px 35px;
+    }
+
+    form {
+        padding: 22px 15px;
+
+        border-radius: 14px;
+    }
+
+    form > label {
+        font-size: 13px;
+    }
+
+    form > input[type="text"],
+    form > input[type="number"] {
+        font-size: 14px;
+    }
+
+    #num_questions {
+        max-width: 100%;
+    }
+
+    form > button[type="button"] {
+        width: 100%;
+
+        margin-bottom: 22px;
+    }
+
+    .qblock {
+        padding: 20px 15px;
+
+        border-radius: 13px;
+    }
+
+    .qblock h4 {
+        font-size: 16px;
+    }
+
+    .qblock textarea {
+        min-height: 90px;
+    }
+
+    .qblock input,
+    .qblock textarea {
+        font-size: 14px;
+    }
+
+    .qblock label {
+        width: 100%;
+
+        justify-content: space-between;
+
+        font-size: 13px;
+    }
+
+    .qblock select {
+        min-width: 65px;
+    }
+
+    form > button[type="submit"] {
+        min-height: 48px;
+
+        margin-top: 24px;
+
+        font-size: 14px;
+    }
+}
+
+/* ================================
+   Selection
+   ================================ */
+
+::selection {
+    background: #6366f1;
+
+    color: #ffffff;
+}
