@@ -26,7 +26,6 @@ $feedbacks_count = $db->query('SELECT COUNT(*) AS c FROM feedbacks')->fetch_asso
       <a href="create_test.php">Create Test</a>
       <a href="tests_list.php">Tests</a>
       <a href="users.php">Users</a>
-      <a href="feedbacks.php">Feedbacks</a>
       <a href="results.php">Results</a>
       <a href="profile.php">Profile</a>
       <a href="logout.php">Logout</a>

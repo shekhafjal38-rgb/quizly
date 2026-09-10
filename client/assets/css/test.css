@@ -1,6 +1,4 @@
-/* ================================
-   Quizly - Available Tests
-   ================================ */
+
 
 * {
     margin: 0;
@@ -15,9 +13,6 @@ body {
     min-height: 100vh;
 }
 
-/* ================================
-   Header
-   ================================ */
 
 header {
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
@@ -71,9 +66,6 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* ================================
-   Main Content
-   ================================ */
 
 main {
     width: 100%;
@@ -97,9 +89,6 @@ main {
         0 3px 10px rgba(79, 70, 229, 0.04);
 }
 
-/* ================================
-   Tests List
-   ================================ */
 
 .tests {
     list-style: none;
@@ -116,9 +105,6 @@ main {
     margin: 0;
 }
 
-/* ================================
-   Test Card
-   ================================ */
 
 .tests li {
     position: relative;
@@ -181,10 +167,6 @@ main {
         0 12px 28px rgba(79, 70, 229, 0.12);
 }
 
-/* ================================
-   Test Title
-   ================================ */
-
 .tests li strong {
     display: block;
 
@@ -198,10 +180,6 @@ main {
 
     line-height: 1.4;
 }
-
-/* ================================
-   Question Count
-   ================================ */
 
 .tests li p {
     display: inline-block;
@@ -223,9 +201,6 @@ main {
     font-weight: 700;
 }
 
-/* ================================
-   Start Button
-   ================================ */
 
 .tests li > a {
     display: inline-flex;
@@ -282,9 +257,6 @@ main {
     transform: translateY(0);
 }
 
-/* ================================
-   Empty State
-   ================================ */
 
 .tests:empty::after {
     content: "No tests are currently available.";
@@ -310,9 +282,6 @@ main {
     font-weight: 600;
 }
 
-/* ================================
-   Tablet
-   ================================ */
 
 @media (max-width: 768px) {
 
@@ -352,10 +321,6 @@ main {
         padding: 22px;
     }
 }
-
-/* ================================
-   Mobile
-   ================================ */
 
 @media (max-width: 480px) {
 
@@ -414,9 +379,6 @@ main {
     }
 }
 
-/* ================================
-   Selection
-   ================================ */
 
 ::selection {
     background: #6366f1;

@@ -1,17 +1,116 @@
-body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#222;margin:0}
-header{background:#2b6ea3;color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
-header h1{margin:0;font-size:18px}
-nav a{color:#fff;margin-left:12px;text-decoration:none}
-.center{max-width:360px;margin:70px auto;padding:20px;background:#fff;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.center h1{margin:0 0 12px;text-align:center}
-form input, form textarea, form select{width:100%;padding:8px;margin:6px 0;border:1px solid #ddd;border-radius:4px}
-button{background:#2b6ea3;color:#fff;border:0;padding:10px 14px;border-radius:4px;cursor:pointer}
-.cards{display:flex;gap:12px;padding:18px}
-.card{background:#fff;padding:18px;border-radius:6px;flex:1;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.06)}
-table{width:100%;border-collapse:collapse;background:#fff}
-table th,table td{padding:8px;border-bottom:1px solid #eee;text-align:left}
-.qblock{background:#fff;padding:8px;margin:8px 0;border:1px solid #eee;border-radius:4px}
-.profile{background:#fff;padding:16px;border-radius:6px;width:280px}
-.error{background:#ffe5e5;color:#900;padding:8px;border-radius:4px}
-.success{background:#e6ffea;color:#145a2a;padding:8px;border-radius:4px}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+    margin: 0
+}
 
+header {
+    background: #2b6ea3;
+    color: #fff;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px
+}
+
+nav a {
+    color: #fff;
+    margin-left: 12px;
+    text-decoration: none
+}
+
+.center {
+    max-width: 360px;
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08)
+}
+
+.center h1 {
+    margin: 0 0 12px;
+    text-align: center
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px
+}
+
+button {
+    background: #2b6ea3;
+    color: #fff;
+    border: 0;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+.cards {
+    display: flex;
+    gap: 12px;
+    padding: 18px
+}
+
+.card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 6px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .06)
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff
+}
+
+table th,
+table td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    text-align: left
+}
+
+.qblock {
+    background: #fff;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #eee;
+    border-radius: 4px
+}
+
+.profile {
+    background: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    width: 280px
+}
+
+.error {
+    background: #ffe5e5;
+    color: #900;
+    padding: 8px;
+    border-radius: 4px
+}
+
+.success {
+    background: #e6ffea;
+    color: #145a2a;
+    padding: 8px;
+    border-radius: 4px
+}

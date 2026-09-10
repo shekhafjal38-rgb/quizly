@@ -1,6 +1,4 @@
-/* ================================
-   Quizly Admin - Tests Page
-   ================================ */
+
 
 * {
     margin: 0;
@@ -19,9 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* ================================
-   Header / Navbar
-   ================================ */
+
 
 header {
     position: sticky;
@@ -64,9 +60,6 @@ header h1 {
     white-space: nowrap;
 }
 
-/* ================================
-   Navbar
-   ================================ */
 
 nav {
     display: flex;
@@ -127,9 +120,6 @@ nav a[href="dashboard.php"] {
     border-color: rgba(255, 255, 255, 0.20);
 }
 
-/* ================================
-   Main Content
-   ================================ */
 
 main {
     width: 100%;
@@ -139,9 +129,7 @@ main {
     padding: 45px 5%;
 }
 
-/* ================================
-   Tests Table
-   ================================ */
+
 
 main > table {
     width: 100%;
@@ -166,9 +154,7 @@ main > table {
         0 10px 30px rgba(15, 23, 42, 0.07);
 }
 
-/* ================================
-   Table Header
-   ================================ */
+
 
 main > table th {
     padding: 16px 18px;
@@ -192,9 +178,7 @@ main > table th {
     white-space: nowrap;
 }
 
-/* ================================
-   Table Cells
-   ================================ */
+
 
 main > table td {
     padding: 17px 18px;
@@ -210,15 +194,13 @@ main > table td {
     vertical-align: middle;
 }
 
-/* Remove border from last row */
+
 
 main > table tr:last-child td {
     border-bottom: none;
 }
 
-/* ================================
-   Table Hover
-   ================================ */
+
 
 main > table tr {
     transition: background 0.2s ease;
@@ -228,9 +210,6 @@ main > table tr:hover td {
     background: #f8faff;
 }
 
-/* ================================
-   ID Column
-   ================================ */
 
 main > table td:first-child {
     width: 80px;
@@ -242,9 +221,7 @@ main > table td:first-child {
     text-align: center;
 }
 
-/* ================================
-   Test Title
-   ================================ */
+
 
 main > table td:nth-child(2) {
     min-width: 300px;
@@ -256,9 +233,7 @@ main > table td:nth-child(2) {
     font-weight: 700;
 }
 
-/* ================================
-   Created Date
-   ================================ */
+
 
 main > table td:nth-child(3) {
     min-width: 180px;
@@ -268,9 +243,7 @@ main > table td:nth-child(3) {
     white-space: nowrap;
 }
 
-/* ================================
-   Questions Count
-   ================================ */
+
 
 main > table td:nth-child(4) {
     width: 150px;
@@ -282,25 +255,18 @@ main > table td:nth-child(4) {
     text-align: center;
 }
 
-/* ================================
-   Question Count Badge
-   ================================ */
+
 
 main > table td:nth-child(4) {
     position: relative;
 }
 
-/* ================================
-   Empty Table
-   ================================ */
+
 
 main > table:has(tr:first-child:last-child) {
     min-height: 100px;
 }
 
-/* ================================
-   Tablet
-   ================================ */
 
 @media (max-width: 1100px) {
 
@@ -333,9 +299,6 @@ main > table:has(tr:first-child:last-child) {
     }
 }
 
-/* ================================
-   Mobile
-   ================================ */
 
 @media (max-width: 768px) {
 
@@ -390,9 +353,6 @@ main > table:has(tr:first-child:last-child) {
     }
 }
 
-/* ================================
-   Small Mobile
-   ================================ */
 
 @media (max-width: 480px) {
 
@@ -446,9 +406,7 @@ main > table:has(tr:first-child:last-child) {
     }
 }
 
-/* ================================
-   Selection
-   ================================ */
+
 
 ::selection {
     background: #6366f1;

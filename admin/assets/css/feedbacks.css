@@ -1,6 +1,4 @@
-/* ================================
-   Quizly Admin - Global Styles
-   ================================ */
+
 
 * {
     margin: 0;
@@ -19,9 +17,6 @@ body {
     min-height: 100vh;
 }
 
-/* ================================
-   Header / Navbar
-   ================================ */
 
 header {
     position: sticky;
@@ -64,9 +59,6 @@ header h1 {
     white-space: nowrap;
 }
 
-/* ================================
-   Navbar
-   ================================ */
 
 nav {
     display: flex;
@@ -119,9 +111,6 @@ nav a:active {
     transform: translateY(0);
 }
 
-/* ================================
-   Main Content
-   ================================ */
 
 main {
     width: 100%;
@@ -131,9 +120,6 @@ main {
     padding: 45px 5%;
 }
 
-/* ================================
-   Feedback Table Container
-   ================================ */
 
 main > table {
     width: 100%;
@@ -158,9 +144,6 @@ main > table {
         0 10px 30px rgba(15, 23, 42, 0.07);
 }
 
-/* ================================
-   Table Header
-   ================================ */
 
 main > table th {
     padding: 16px 18px;
@@ -184,10 +167,6 @@ main > table th {
     white-space: nowrap;
 }
 
-/* ================================
-   Table Cells
-   ================================ */
-
 main > table td {
     padding: 17px 18px;
 
@@ -202,15 +181,11 @@ main > table td {
     vertical-align: top;
 }
 
-/* Remove last border */
 
 main > table tr:last-child td {
     border-bottom: none;
 }
 
-/* ================================
-   Table Hover
-   ================================ */
 
 main > table tr {
     transition: background 0.2s ease;
@@ -220,9 +195,6 @@ main > table tr:hover td {
     background: #f8faff;
 }
 
-/* ================================
-   ID Column
-   ================================ */
 
 main > table td:first-child {
     width: 65px;
@@ -234,9 +206,6 @@ main > table td:first-child {
     text-align: center;
 }
 
-/* ================================
-   User Column
-   ================================ */
 
 main > table td:nth-child(2) {
     color: #1e293b;
@@ -246,9 +215,6 @@ main > table td:nth-child(2) {
     min-width: 130px;
 }
 
-/* ================================
-   Email Column
-   ================================ */
 
 main > table td:nth-child(3) {
     color: #6366f1;
@@ -256,9 +222,6 @@ main > table td:nth-child(3) {
     min-width: 180px;
 }
 
-/* ================================
-   Message Column
-   ================================ */
 
 main > table td:nth-child(4) {
     color: #475569;
@@ -270,9 +233,6 @@ main > table td:nth-child(4) {
     word-break: break-word;
 }
 
-/* ================================
-   Date Column
-   ================================ */
 
 main > table td:nth-child(5) {
     color: #64748b;
@@ -282,9 +242,6 @@ main > table td:nth-child(5) {
     min-width: 150px;
 }
 
-/* ================================
-   Back Link
-   ================================ */
 
 nav a[href="dashboard.php"] {
     background: rgba(255, 255, 255, 0.18);
@@ -292,17 +249,11 @@ nav a[href="dashboard.php"] {
     border-color: rgba(255, 255, 255, 0.20);
 }
 
-/* ================================
-   Empty Table
-   ================================ */
 
 main > table:has(tr:first-child:last-child) {
     min-height: 100px;
 }
 
-/* ================================
-   Tablet
-   ================================ */
 
 @media (max-width: 1100px) {
 
@@ -342,9 +293,6 @@ main > table:has(tr:first-child:last-child) {
     }
 }
 
-/* ================================
-   Mobile
-   ================================ */
 
 @media (max-width: 768px) {
 
@@ -389,9 +337,6 @@ main > table:has(tr:first-child:last-child) {
     }
 }
 
-/* ================================
-   Small Mobile
-   ================================ */
 
 @media (max-width: 480px) {
 
@@ -443,9 +388,6 @@ main > table:has(tr:first-child:last-child) {
     }
 }
 
-/* ================================
-   Selection
-   ================================ */
 
 ::selection {
     background: #6366f1;

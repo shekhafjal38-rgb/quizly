@@ -1,6 +1,4 @@
-/* ================================
-   Quizly - Login Page Styles
-   ================================ */
+
 
 * {
     margin: 0;
@@ -21,9 +19,6 @@ body {
     padding: 20px;
 }
 
-/* ================================
-   Login Card
-   ================================ */
 
 .center {
     width: 100%;
@@ -43,9 +38,6 @@ body {
     animation: fadeIn 0.4s ease;
 }
 
-/* ================================
-   Heading
-   ================================ */
 
 .center h1 {
     text-align: center;
@@ -78,17 +70,11 @@ body {
     );
 }
 
-/* ================================
-   Form
-   ================================ */
 
 form {
     width: 100%;
 }
 
-/* ================================
-   Inputs
-   ================================ */
 
 form input {
     width: 100%;
@@ -134,9 +120,6 @@ form input:focus {
         0 0 0 4px rgba(99, 102, 241, 0.12);
 }
 
-/* ================================
-   Login Button
-   ================================ */
 
 form button {
     width: 100%;
@@ -186,9 +169,6 @@ form button:focus-visible {
     outline-offset: 2px;
 }
 
-/* ================================
-   Error Message
-   ================================ */
 
 .error {
     width: 100%;
@@ -212,9 +192,6 @@ form button:focus-visible {
     text-align: center;
 }
 
-/* ================================
-   Register Text
-   ================================ */
 
 .center > p {
     margin-top: 24px;
@@ -242,9 +219,6 @@ form button:focus-visible {
     text-decoration: underline;
 }
 
-/* ================================
-   Animation
-   ================================ */
 
 @keyframes fadeIn {
     from {
@@ -258,9 +232,6 @@ form button:focus-visible {
     }
 }
 
-/* ================================
-   Tablet
-   ================================ */
 
 @media (max-width: 600px) {
 
@@ -279,9 +250,6 @@ form button:focus-visible {
     }
 }
 
-/* ================================
-   Small Mobile
-   ================================ */
 
 @media (max-width: 400px) {
 
@@ -307,9 +275,6 @@ form button:focus-visible {
     }
 }
 
-/* ================================
-   Text Selection
-   ================================ */
 
 ::selection {
     background: #6366f1;
